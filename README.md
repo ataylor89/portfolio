@@ -60,3 +60,17 @@ You can find the list of projects below
     - This project teaches us a lot about public key cryptography, asymmetric key cryptography, and the RSA encryption algorithm
     - If Alice and Barbara want to exchange secure communications, then Alice gives Barbara her public key, and Barbara uses Alice's public key to encrypt her messages, and Barbara gives Alice her public key, and Alice uses Barbara's public key to encrypt her messages; then, Barbara uses her private key to decrypt Alice's messages, and Alice uses her private key to decrypt Barbara's messages
     - That's how it works... when Alice and Barbara exchange public keys, it is called a handshake, an RSA handshake
+5. [xor](https://github.com/ataylor89/xor)
+    - This is an open-source implementation of the XOR encryption algorithm
+    - The XOR encryption algorithm is an example of symmetric key cryptography, which means that the encryption key is identical to the decryption key
+    - The XOR algorithm is very secure, but if the key gets discovered, it can be used to decrypt your messages, so it's important to keep the key as secret as possible (i.e. only known to the least possible number of trusted parties)
+    - For example, if Alice and Barbara exchange secret messages using XOR encryption, then both Alice and Barbara would have to know the key, but they can keep it a secret and not tell anyone else the key
+    - The project contained within this repository uses a file called keygen.py to generate a random key of a specified length (e.g. 1024 bytes)
+    - The project uses a file called xor.py to do the XOR encryption
+    - The XOR encryption algorithm is based on the XOR operation
+    - The XOR operation has the special property that a = (a xor b) xor b
+    - This means we can encrypt a message twice to get the original message
+    - For example, let encrypted_message = xor(message, key)
+    - Let original_message = xor(encrypted_message, key)
+    - Then it's necessarily true that message == original_message; we can verify this programmatically and we can also verify this using mathematical proof
+    - So you see that... the RSA algorithm is based on prime numbers and their special properties... whereas the XOR algorithm is based on the XOR operation and its special properties
