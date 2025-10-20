@@ -37,4 +37,26 @@ You can find the list of projects below
     - It has settings (in the preferences dialog) for controlling font size, font name, foreground color, background color, etc
     - This project teaches us a lot about Java, Swing, and different Swing components (like JTextArea and JDialog)
 4. [rsa](https://github.com/ataylor89/rsa)
-    - To be continued... I might push these changes before I finish writing the file
+    - This is an open-source implementation of the RSA encryption algorithm
+    - The RSA encryption algorithm is an example of asymmetric key cryptography, which means that the encryption key is different from the decryption key
+    - The RSA encryption algorithm is also an example of public key cryptography, which is really just a special case of asymmetric key cryptography, in which the encryption key is considered public and the decryption key is considered private
+    - The RSA algorithm is very secure, and if the public key gets discovered, it cannot be used to decrypt messages, and a hacker must derive the private key from the public key in order to decrypt an encrypted message
+    - In a symmetric key algorithm, like XOR, on the other hand, if a hacker discovers the encryption key, the hacker can use the encryption key to decrypt messages, since the encryption key and the decryption key are identical
+    - The project contained within this repository uses a file called primetable.py to generate a prime table
+    - The key generation algorithm chooses two distinct prime numbers, p and q, from the prime table
+    - The key generation algorithm then calculates the (n, e, d) values based on p and q
+    - n is the product of p and q; e is the encryption exponent; d is the decryption exponent
+    - We use the formula c = m^e % n to calculate the cipher (c) for a Unicode code point (m)
+    - We use the formula m = c^d % n to calculate the Unicode code point (m) for a cipher (c)
+    - The formula c = m^e % n is used to encrypt a Unicode character
+    - The formula m = c^d % n is used to decrypt a cipher
+    - We loop through the characters in a string, encrypt each character, encode the cipher, and join the encodings to create an encrypted message (first we encrypt a code point and make it a cipher, then we encode the cipher, then we append the encoding to a string and the resulting string represents the encrypted message)
+    - The rsa project uses a file called keytable.py to generate keys and add them to a key table
+    - The project uses a file called keygen.py to generate a key pair (public and private) from the key table and write them to file
+    - The encrypt.py module is used to encrypt a message given a public key
+    - The decrypt.py module is used to decrypt an encrypted message given a private key
+    - The util.py module has a method called power_mod_n which is used to efficiently calculate m^e % n and c^d % n
+    - The project contained within this repository can be used to encrypt and decrypt messages using the RSA algorithm
+    - This project teaches us a lot about public key cryptography, asymmetric key cryptography, and the RSA encryption algorithm
+    - If Alice and Barbara want to exchange secure communications, then Alice gives Barbara her public key, and Barbara uses Alice's public key to encrypt her messages, and Barbara gives Alice her public key, and Alice uses Barbara's public key to encrypt her messages; then, Barbara uses her private key to decrypt Alice's messages, and Alice uses her private key to decrypt Barbara's messages
+    - That's how it works... when Alice and Barbara exchange public keys, it is called a handshake, an RSA handshake
