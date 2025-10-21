@@ -74,3 +74,17 @@ You can find the list of projects below
     - Let original_message = xor(encrypted_message, key)
     - Then it's necessarily true that message == original_message; we can verify this programmatically and we can also verify this using mathematical proof
     - So you see that... the RSA algorithm is based on prime numbers and their special properties... whereas the XOR algorithm is based on the XOR operation and its special properties
+6. [rot13](https://github.com/ataylor89/rot13)
+    - This is an open-source implementation of the rot13 encryption algorithm
+    - rot13 is a rotation cipher
+    - The rot13 algorithm rotates each alphabetic character in a message by 13 places in the alphabet, and wraps around when it reaches the end of the alphabet
+    - There are 26 letters in the English alphabet, which means, if you apply rot13 to a message twice, you get the original message
+    - In other words, rot13(rot13(message)) == message
+    - This is reminiscent of XOR encryption; we can say that rot13 is a symmetric key algorithm just like XOR
+    - It is important to know that the rot13 algorithm is not secure
+    - A hacker can crack a rot13-encrypted message just by trying out the rot13 algorithm
+    - So, just to summarize, the RSA and XOR algorithms are very secure, but the rot13 algorithm is not secure
+    - Even though the rot13 algorithm is not secure, it is still very useful to know
+    - I believe that many people from classical antiquity used rotation ciphers similar to rot13
+    - It is also the case that... there are specific uses for rot13... like when you want to send a message that is easy to decrypt
+    - In conclusion, the rot13 algorithm is an important part of our education in encryption, just like the RSA and XOR algorithms
