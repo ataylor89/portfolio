@@ -87,4 +87,4 @@ You can find the list of projects below
     - Even though the rot13 algorithm is not secure, it is still very useful to know
     - I believe that many people from classical antiquity used rotation ciphers similar to rot13
     - It is also the case that... there are specific uses for rot13... like when you want to send a message that is easy to decrypt
-    - In conclusion, the rot13 algorithm is an important part of our education in encryption, just like the RSA and XOR algorithms
+    - In conclusion, the rot13 algorithm is an important part of our education in encryption, just like the RSA algorithm and the XOR algorithm
