@@ -2,7 +2,7 @@
 
 I would like to share some projects from my software portfolio
 
-The projects included in this list give an introduction to socket programming, graphics, object-oriented programming, object-oriented design, modular design, GUIs, cryptography, web design, web applications, shell scripting, command-line programs, desktop software, design patterns, cloud computing, the TCP/IP protocol stack, algorithms, assembly language, arm64 assembly, x86 assembly, interprocess communication, data structures, databases, object serialization and deserialization, number systems (hexadecimal, decimal, and binary), modular arithmetic, image processing, image editing, ASCII, Unicode, character encodings, REST APIs, multithreading, and many other topics in computer science
+The projects included in this list give an introduction to socket programming, graphics, object-oriented programming, object-oriented design, modular design, GUIs, cryptography, web design, web applications, shell scripting, command-line programs, desktop software, design patterns, cloud computing, the TCP/IP protocol stack, algorithms, assembly language, arm64 assembly, x86 assembly, interprocess communication, data structures, databases, object serialization and deserialization, number systems (hexadecimal, decimal, and binary), modular arithmetic, image processing, image editing, ASCII, Unicode, character encodings, REST APIs, multithreading, boolean logic, and many other topics in computer science
 
 (I might also add, byte arithmetic, bit arithmetic, packets, etc)
 
