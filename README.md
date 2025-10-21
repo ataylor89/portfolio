@@ -2,7 +2,7 @@
 
 I would like to share some projects from my software portfolio
 
-The projects included in this list give an introduction to socket programming, graphics, object-oriented programming, object-oriented design, modular design, GUIs, cryptography, web design, web applications, and many other topics in computer science
+The projects included in this list give an introduction to socket programming, graphics, object-oriented programming, object-oriented design, modular design, GUIs, cryptography, web design, web applications, shell scripting, command-line programs, desktop software, design patterns, cloud computing, the TCP/IP protocol stack, and many other topics in computer science
 
 (I might also add, byte arithmetic, bit arithmetic, packets, etc)
 
