@@ -88,3 +88,43 @@ You can find the list of projects below
     - I believe that many people from classical antiquity used rotation ciphers similar to rot13
     - It is also the case that... there are specific uses for rot13... like when you want to send a message that is easy to decrypt
     - In conclusion, the rot13 algorithm is an important part of our education in cryptography, just like the RSA and XOR algorithms
+7. [rot88](https://github.com/ataylor89/rot88)
+    - This is an open-source implementation of an encryption algorithm that I created called rot88
+    - rot88 is a rotation cipher
+    - The 88 in rot88 stands for 0x88000, which is half the size of the Unicode code space
+    - The Unicode code space has 0x110000 code points, which comes out to over 1 million code points in decimal
+    - rot88 is a lot like rot13, but instead of rotating a letter by 13 places, it rotates a Unicode character by 0x88000 places
+    - First, you get the code point for a Unicode character; a code point is an integer value that maps to a character
+    - Then, you add 0x88000 to the code point, and calculate the remainder modulo 0x110000
+    - The result is the new code point, i.e. new_code_point = (original_code_point + 0x88000) % 0x110000
+    - You look up the Unicode character for the new code point, and substitute this new character for the original character
+    - You apply this algorithm repeatedly, until every character in the message has been processed, and every substitution has been made
+    - The result is the encrypted or decrypted message
+    - rot88 is a symmetric key algorithm just like XOR and rot13
+    - In symmetric key algorithms like XOR, rot13, and rot88, the same algorithm is used for both encryption and decryption
+    - I wanted to give another example of a rotation cipher; there are many popular rotation ciphers that have been used throughout history
+    - rot88 is actually not a secure encryption algorithm
+    - RSA and XOR are very secure encryption algorithms, but rot13 and rot88 are not secure
+    - The rot88 algorithm is not secure because a hacker could just try rot88 on any encrypted message, and see if it works
+    - At the same time, the rot88 algorithm is very useful to know
+    - The rot88 algorithm teaches us about Unicode, character encodings, code points, and how they can be used to create an encryption algorithm
+    - In case you're wondering, "What is ASCII?" ASCII is a 7-bit character set that supports 128 characters
+    - ASCII is a subset of Unicode and it comprises the first 128 characters in Unicode
+    - ASCII and Unicode are consistent for the first 128 characters (or code points)
+    - Unicode is a much larger character set, that supports many world languages, and has over 1 million characters (or code points)
+    - The letter 'a' is a character in the Unicode character set
+    - The code point 97 maps to the letter 'a' in the Unicode lookup table
+    - This really teaches you the difference between a character and a code point
+    - When you see the letter 'a' appear on the pixels of your screen, you are looking at a glyph
+    - The letter 'a' can be represented by different glyphs, depending on what font you are using
+    - When you write the letter 'a' to a file, you write the the value 97 to file
+    - The number 97 can be represented as 61 in hexadecimal or 1100001 in binary
+    - We use numbers to store data, because ultimately, data gets stored as voltage signals (high or low) in adjacent memory cells
+    - Data gets stored in an array of adjacent memory cells, and each memory cell has a voltage signal (high or low)
+    - A high voltage signal gets interpreted as a 1, and a low voltage signal gets interpreted as a 0
+    - So we actually convert text (like this) to numbers and then we convert numbers to voltage signals
+    - When we read a file, we convert voltage signals to numbers and numbers to text, in a process called file decoding
+    - When we write to a file, we convert text to numbers and numbers to voltage signals, in a process called file encoding
+    - So we actually have to decode a text file before we read a text file
+    - We also have to encode a text file, while writing it, or upon saving it
+    - This is a long series of notes, but I wanted to spend some time talking about Unicode, character encodings, encoding a text file, decoding a text file, and the process of converting text to numbers to voltage signals, and vice versa, when reading or writing a file
