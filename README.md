@@ -109,7 +109,7 @@ You can find the list of projects below
     - At the same time, the rot88 algorithm is very useful to know
     - The rot88 algorithm teaches us about Unicode, character encodings, code points, and how they can be used to create an encryption algorithm
     - In case you're wondering, "What is ASCII?" ASCII is a 7-bit character set that supports 128 characters
-    - ASCII is a subset of Unicode and it comprises the first 128 characters in Unicode
+    - ASCII is a subset of Unicode and it comprises the first 128 characters of Unicode
     - ASCII and Unicode are consistent for the first 128 characters (or code points)
     - Unicode is a much larger character set, that supports many world languages, and has over 1 million characters (or code points)
     - The letter 'a' is a character in the Unicode character set
