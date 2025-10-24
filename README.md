@@ -128,3 +128,24 @@ You can find the list of projects below
     - So we actually have to decode a text file before we read a text file
     - We also have to encode a text file, while writing it, or upon saving it
     - This is a long series of notes, but I wanted to spend some time talking about Unicode, character encodings, encoding a text file, decoding a text file, and the process of converting text to numbers to voltage signals, and vice versa, when reading or writing a file
+8. [signal](https://github.com/ataylor89/signal)
+    - This is an open-source suite of signaling programs written in C and assembly
+    - The signaling programs from this software suite can be used to stop, resume, or terminate an existing process
+    - For example, the command `sigstop 2357` stops the process with process ID 2357
+    - The command `sigcont 2357` resumes the process with process ID 2357
+    - The command `sigterm 2357` terminates the process with process ID 2357
+    - The source code in the arm folder is meant for a computer that has an ARM64 instruction set architecture
+    - The source code in the x86 folder is meant for a computer that has an x86 instruction set architecture
+    - My personal MacBook has an ARM64 architecture, so I use the code from the arm folder on my personal MacBook, and compile it on my personal MacBook, to create an executable that can be run on my personal MacBook
+    - My server on AWS cloud has an x86-64 architecture, so I use the code from the x86 folder on my EC2 instance, and compile it on my EC2 instance, to create an executable that can be run on my EC2 instance
+    - One of the things I really like about this project is that it teaches us about system calls
+    - A system call (or syscall) is a request made by a program to the operating system's kernel to perform a task or service
+    - A system call can be granted or denied by the kernel
+    - A system call corresponds to a specific kernel function identified by its call number
+    - The kernel of an operating system is the core part of the operating system
+    - The system call API (or syscall API) corresponds to a set of kernel functions identified by their call numbers
+    - On my Apple M1 chip, register x16 is used to hold the system call number
+    - On my Apple M1 chip, registers x0 and x1 are used to hold the first two arguments to a system call
+    - You can see in arm/sigterm.s, that register x0 holds the process ID, register x1 holds the signal number, and register x16 holds the system call number
+    - To make a long story short, the signal repository contains a set of programs that can be used to stop, resume, or terminate an existing process, and it uses assembly language to make a system call
+    - This project teaches us about C, assembly, system calls, the operating system kernel, user programs, kernel mode, user mode, how we can use assembly language to make system calls, and how we can use system calls to interact with the operating system
