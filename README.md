@@ -149,3 +149,5 @@ You can find the list of projects below
     - You can see in arm/sigterm.s, that register x0 holds the process ID, register x1 holds the signal number, and register x16 holds the system call number
     - To make a long story short, the signal repository contains a set of programs that can be used to stop, resume, or terminate an existing process, and it uses assembly language to make a system call
     - This project teaches us about C, assembly, system calls, the operating system kernel, user programs, kernel mode, user mode, how we can use assembly language to make system calls, and how we can use system calls to interact with the operating system
+    - It's worth mentioning that, in the arm64 instruction set architecture, the svc instruction is used to make a system call, and in the x86 instruction set architecture, the syscall instruction is used to make a system call
+    - I really enjoy writing assembly language because it teaches me how a computer works
