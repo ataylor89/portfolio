@@ -162,7 +162,7 @@ You can find the list of projects below
     - The JavaScript code is stored in homepage/static/js
     - The CSS code is stored in homepage/static/css
     - I also put data files (like dictionary.json and 2025.json) in the homepage/static/data directory
-    - Flask uses the Jinja templating language to render the HTML templates stored in ${project_root}/templates before returning them to the HTTP client
+    - Flask uses the Jinja templating language to render the HTML templates stored in homepage/templates before returning them to the HTTP client
     - This means that the HTML templates can make use of server-side Python variables... the HTML templates are dynamic
     - For example, the cryptography.html template makes use of a server-side Python variable to define its list of key names for a particular encryption algorithm (the key names are options in a select element)
     - Flask is fundamental to this project, because it's a very powerful web framework that lets you build elegant web applications
