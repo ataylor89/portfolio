@@ -151,3 +151,78 @@ You can find the list of projects below
     - This project teaches us about C, assembly, system calls, the operating system kernel, user programs, kernel mode, user mode, how we can use assembly language to make system calls, and how we can use system calls to interact with the operating system
     - It's worth mentioning that, in the arm64 instruction set architecture, the svc instruction is used to make a system call, and in the x86 instruction set architecture, the syscall instruction is used to make a system call
     - I really enjoy writing assembly language because it teaches me how a computer works
+9. [homepage](https://github.com/ataylor89/homepage)
+    - This is an open source web application that is written in Python
+    - It leverages the Flask web framework to route, handle, and respond to HTTP requests (like GET requests and POST requests)
+    - It can be run locally (e.g. on a MacBook), on a web host, or on the cloud (e.g. on an EC2 instance in AWS cloud)
+    - I run it locally and I also run it on an EC2 instance in AWS cloud
+    - In my opinion, the word "cloud" is a computer science term that means "internet"... cloud is a metaphor for the internet
+    - The project is organized according to a common Flask paradigm...
+    - The HTML templates are stored in homepage/templates
+    - The JavaScript code is stored in homepage/static/js
+    - The CSS code is stored in homepage/static/css
+    - I also put data files (like dictionary.json and 2025.json) in the homepage/static/data directory
+    - Flask uses the Jinja templating language to render the HTML templates stored in ${project_root}/templates before returning them to the HTTP client
+    - This means that the HTML templates can make use of server-side Python variables... the HTML templates are dynamic
+    - For example, the cryptography.html template makes use of a server-side Python variable to define its list of key names for a particular encryption algorithm (the key names are options in a select element)
+    - Flask is fundamental to this project, because it's a very powerful web framework that lets you build elegant web applications
+    - The homepage project has three external dependencies: Flask, requests, and geopy
+    - The Flask framework allows us to create a Flask object, which can be run as a web server
+    - The Flask framework also provides us with decorator methods (like @app.route) which allow us to route HTTP requests to a Python method of our choice (e.g. the '/' URL is routed to the home method in views.py)
+    - The requests library is a second dependency and it is used in homepage/weather.py
+    - We use the requests library to make GET requests to api.weather.gov
+    - The response from api.weather.gov contains weekly weather data for a specific longitude and latitude
+    - I think that weather.py is the only module that uses the requests library at the present moment in time
+    - The geopy library is a third dependency and it is also used in homepage/weather.py
+    - We use the geopy library to convert place names (like Mt. Everest) to coordinates (longitude and latitude)
+    - After converting a place name to coordinates, we can get weather data for that place by issuing a GET request to api.weather.gov
+    - The process of converting a place name to coordinates is often called geocoding
+    - geopy is a geocoding library, and we use it for that purpose
+    - You can see that, at the present moment in time, homepage has three external dependencies: Flask, requests, and geopy
+    - I wanted homepage to be a "no setup" web application... so there is very little setup required
+    - The external dependencies can be installed by running the command `pip install -r requirements.txt` in the project root directory
+    - After the dependencies are installed, the web server can be started by running the command `python main.py` from the project root directory
+    - After the web server has started, you can open the web page by visiting 127.0.0.1 or localhost in a web browser
+    - localhost is a hostname that gets resolved to 127.0.0.1 (you can see this mapping in /etc/hosts on MacOS)
+    - The homepage application bundles HTML, JavaScript, and CSS code with Python code
+    - The Python code stays on the server, but the HTML, JavaScript, and CSS code get shipped to the browser
+    - When the web browser makes a GET request for the index page, the web server produces a GET response which contains the index.html file
+    - In this way, by means of GET requests, the web content (.html, .js, and .css) is shipped to the web browser
+    - The server also has web services that can be called by making a GET or POST request to a specific endpoint
+    - The web services often return data in JSON form (JSON stands for JavaScript Object Notation and it's a common data format)
+    - For example, the weather.html page calls a web service to retrieve weather data for a specific place, by making a POST request to the /weather_data endpoint
+    - The place name or coordinates are supplied as form data in the POST request
+    - So you can see that the homepage webapp has a rich HTTP API that supports many features
+    - You might ask, "Is it a RESTful API?"
+    - At the present moment, I think it qualifies to be a RESTful API
+    - But in the future, I would like to add logins, registrations, and sessions
+    - When I add logins and sessions, the API will no longer be stateless
+    - I think that an HTTP API has to be stateless in order to be a REST API
+    - The current HTTP API is stateless... but when I add logins and sessions, it will no longer be stateless
+    - It is very useful to learn how to build a web server and a web API
+    - The homepage repository is a good example of a web server and a web API
+    - A web server can be used to serve a web page to a web browser
+    - A web server can also be used to define an HTTP API that can be called by an HTTP client
+    - A web browser is just one example of an HTTP client...
+    - There are REST clients out there that are specifically designed to interact with REST APIs
+    - You can write your own HTTP client by writing a Python application that leverages the requests module (the requests module can be used to make HTTP requests like GET and POST and then store the HTTP response as an object)
+    - In the chat project, we create a chat server built on TCP
+    - In the homepage project, we create an HTTP server built on TCP, and the Flask framework does all the heavy lifting for us
+    - Another popular web framework that allows you to build an HTTP server is Django
+    - Flask and Django are two popular Python libraries that allow you to build an HTTP server
+    - Technically, you could write Python code that builds a web server from scratch, but this would take a lot of time
+    - The Flask framework takes care of all the technical details, and builds a web server for you
+    - I think this is a good stopping point...
+    - The homepage application is a great example of a web application written in Python
+    - It leverages the Flask framework, which allows us to build a web server
+    - If you want to write a web application in Java, you can leverage the Spring framework to build a web application
+    - The Spring framework lets you route URLs and handle requests just like Flask and Django
+    - There is also a C++ library called Crow which lets you build a web application or web services in C++
+    - Most programming languages have a framework that simplifies the building of web applications or web services
+    - I am very familiar with Flask, so I like to use Flask to write web applications in Python
+    - The homepage webapp is easily extensible... it is easy to add new web pages, new features, new functionalities
+    - So far I have added the index page, the weather page, the calendar page, the cryptography page, and the dictionary page
+    - In the future, I would like to add more features and functionalities
+    - Thanks for reading
+    - Today is Tuesday, November 4, 2025
+    - I have a lot planned for today so I'm going to end on this note
