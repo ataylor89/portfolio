@@ -226,7 +226,7 @@ You can find the list of projects below
     - Thanks for reading
     - Today is Tuesday, November 4, 2025
     - I have a lot planned for today so I'm going to end on this note
-10.  [md5] (https://github.com/ataylor89/md5) and [sha-256] (https://github.com/ataylor89/sha256)
+10. [md5] (https://github.com/ataylor89/md5) and [sha-256] (https://github.com/ataylor89/sha256)
     - The MD5 and SHA-256 hashing algorithms are closely related, so I can include these two projects as a single item
     - MD5 stands for Message Digest 5 (presumably, version 5) and SHA-256 stands for Secure Hashing Algorithm 256 bits
     - The 256 in SHA-256 means that the message digest (or hash value) is 256 bits long, which is equivalent to 32 bytes
