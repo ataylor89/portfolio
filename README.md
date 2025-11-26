@@ -289,7 +289,7 @@ You can find the list of projects below
     - If I run the command `sha256 '!#%&(@$^*)135792test123'`, which uses the salted password, I get a password hash of `caffcbc8f6d577fc55534a9a38277c0da9a482267ee8c5c3eea701ec64aa9881`
     - The second password hash, which was generated from the salted password, is a lot less common, and it is a lot harder to crack
     - To make things crystal clear, I'll just say...
-    - You can use the sha256 script I provided (or perhaps the /sbin/sha256 program if you have it) to generate a rainbow table of your own making... it can have two columns, password and password hash, and you can use it to crack a common a password hash
+    - You can use the sha256 script I provided (or perhaps the /sbin/sha256 program if you have it) to generate a rainbow table of your own making... it can have two columns, password and password hash, and you can use it to crack a common password hash
     - That really shows you how important it is to have a strong password
     - To make up for the fact that many people don't have a strong password, a secure web application uses password salting and password hashing to make a user's password secure
     - So even if a user chooses "test123" or "mypassword" as their password, the salting mechanism makes the password secure, because it adds a random string before the password, like `!#%&(@$^*)135792`, which results in `!#%&(@$^*)135792test123` or `!#%&(@$^*)135792mypassword`, so that the final (salted) password is very hard to crack
