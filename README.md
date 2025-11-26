@@ -359,6 +359,6 @@ You can find the list of projects below
     - I also say, "animal rights are as important as civil rights"
     - I also say, "animal rights are women's rights"
     - I have many ways of saying it
-    - Jesus said that many people are the salt of the Earth
+    - Jesus made a reference to the salt of the Earth
     - Every animal is the salt of the Earth
     - And with that I wish you a happy holiday season
