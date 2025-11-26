@@ -350,7 +350,7 @@ You can find the list of projects below
     - But this time, I will really bring this series of notes to a conclusion
     - Today is Tuesday, November 25, 2025
     - Thanksgiving is just two days away
-    - I spend Thanksgiving alone, and I also spend it eating vegan food
+    - I plan to spend Thanksgiving watching TV, relaxing, and eating vegan food
     - I eat vegan food every day
     - I am a vegan, an animal rights activist, and a plant rights activist
     - Animal rights are as important as civil rights
