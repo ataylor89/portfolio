@@ -226,3 +226,139 @@ You can find the list of projects below
     - Thanks for reading
     - Today is Tuesday, November 4, 2025
     - I have a lot planned for today so I'm going to end on this note
+10.  [md5] (https://github.com/ataylor89/md5) and [sha-256] (https://github.com/ataylor89/sha256)
+    - The MD5 and SHA-256 hashing algorithms are closely related, so I can include these two projects as a single item
+    - MD5 stands for Message Digest 5 (presumably, version 5) and SHA-256 stands for Secure Hashing Algorithm 256 bits
+    - The 256 in SHA-256 means that the message digest (or hash value) is 256 bits long, which is equivalent to 32 bytes
+    - The MD5 message digest (or hash value), on the contrary, is 128 bits long, which is equivalent to 16 bytes
+    - In other words, a SHA-256 message digest is twice as long as an MD5 message digest
+    - The MD5 and SHA-256 hashing algorithms have many similarities
+    - For one, they process their message in 64-byte blocks
+    - For another, they pad a message before processing it, using a very similar padding algorithm
+    - The MD5 algorithm uses four variables (A, B, C, and D) to create a final password hash
+    - The SHA-256 algorithm uses eight variables (H1 through H8) to create a final password hash
+    - These algorithms process a message in 64-byte blocks, and update their variables on each iteration
+    - In the MD5 algorithm, the variables A, B, C, and D are words, and they are concatenated to produce a password hash
+    - Similarly, in the SHA-256 algorithm, the variables H1 through H8 are words, and they are concatenated to produce a password hash
+    - You might ask, "What is a word?"
+    - A word is a unit of data, just like a byte is a unit of data
+    - In mathematics, we say that a measurement is a number accompanied by a unit
+    - 100 yards is a measurement, and it is equivalent to the length of a football field
+    - 8 gigabytes is a measurement, and it is equivalent to the amount of memory in my computer
+    - The meaning of the computer science term "word" depends on the context
+    - In some contexts, a word is four bytes; in other contexts, a word is two bytes
+    - Originally, a word referred to two bytes of data
+    - With the advent of 64-bit processors, the term "word" came to refer to four bytes of data
+    - We say that a word is a unit of data, and its length depends on the word size of a processor or the word size of an algorithm
+    - In the context of the MD5 and SHA-256 algorithms, a word is four bytes of data
+    - In the context of the earliest processors, a word is two bytes of data
+    - In the context of the Apple M1 processor (which my computer runs on) a word is four bytes of data
+    - So you can see that the word size depends on the context
+    - The variables A, B, C, and D are words with a word size of four bytes, in the context of the MD5 algorithm
+    - The variables H1 through H8 are words with a word size of eight bytes, in the context of the SHA-256 algorithm
+    - I don't want to spend too much time laboring this point, but...
+    - The MD5 algorithm really hinges on the output variables A, B, C, and D, which get modified with each iteration of processing, where a 64-byte block is processed, and the password hash that gets generated is the concentation of A, B, C, and D
+    - The SHA-256 algorithm really hinges on the output variables H1 through H8, which get modified with each iteration of processing, where a 64-byte block of the padded message is processed, and the password hash that gets generated is the concentation of H1 through H8
+    - Having talked about the algorithms in some detail, let's talk about why they are useful, and why we even need them in the first place
+    - The MD5 and SHA-256 hashing algorithms have two main uses that I can think of
+    - The first use case (or application) is for password security
+    - It is a lot more secure to store a password hash in a server-side database than it is to store a plaintext password
+    - If you store a plaintext password on a server, in a file or in a database, then there is a risk that someone who has access to the server will be able to open the file or the database and copy down the password
+    - For example, if you store a plaintext password in /Users/myusername/passwords.txt, then anyone who can read that file can read your password and copy it down
+    - If you store a plaintext password in a MySQL table, then anyone who has the privilege to read that table can read your password and copy it down
+    - If you store a plaintext password in a file database (like a pickle file, a JSON file, or a file that stores a serialized object) then anyone who is able to read that file, or deserialize the object, can read your password and copy it down
+    - It is far more secure to store a password hash
+    - If you store a password hash on a server, in a file or in a database, then anyone who can read your password hash and copy it down is still ignorant of the password, because they have to crack the password hash before they discover the password
+    - Is it easy to crack a password hash?
+    - If you have a common password like "test" or "password" or "password123", then a hacker can lookup your password hash in a rainbow table and discover the password that corresponds to the password hash
+    - But if you have a strong, random password, like )*FDDFKJSDF^$*(#%$UT&$($()##)111!!!, then it is very difficult for a hacker to find your password in a rainbow table, because they are very few rainbow tables that contain a password as strong as that one
+    - A common practice is to salt a password before hashing it, to ensure that it is not a common password
+    - When you salt a password, you turn a common password into an uncommon password, if the password is a common password
+    - Salting a password means adding a random string before the start of the password
+    - So if your password is "test123", then salting the password means adding a string before "test123"
+    - You can assign a salt value to every user
+    - If user "andrew" has a password of "test123", you can assign a salt value of "!#%&(@$^*)135792" to the user "andrew"
+    - Then, the password becomes "!#%&(@$^*)135792test123"
+    - The password has a random factor to it, and it is not a common password (whereas the original password test123 is very common)
+    - So the salted password is "!#%&(@$^*)135792test123", whereas the original password is "test123"
+    - When you hash the salted password, using the SHA-256 algorithm, it produces a password hash that is very difficult to crack, because it is such a random and uncommon password that is hard to find a rainbow table that contains its password hash
+    - In other words, salting a password makes the resulting password hash less vulnerable to rainbow table attacks
+    - That is why we salt a password before hashing it... to make it more resistant to rainbow table attacks
+    - Let's give an example
+    - If I run the command `sha256 'test123'` using my Python script, I get a password hash of `ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae`
+    - If I run the command `sha256 '!#%&(@$^*)135792test123'`, which uses the salted password, I get a password hash of `caffcbc8f6d577fc55534a9a38277c0da9a482267ee8c5c3eea701ec64aa9881`
+    - The second password hash, which was generated from the salted password, is a lot less common, and it is a lot harder to crack
+    - To make things crystal clear, I'll just say...
+    - You can use the sha256 script I provided (or perhaps the /sbin/sha256 program if you have it) to generate a rainbow table of your own making... it can have two columns, password and password hash, and you can use it to crack a common a password hash
+    - That really shows you how important it is to have a strong password
+    - To make up for the fact that many people don't have a strong password, a secure web application uses password salting and password hashing to make a user's password secure
+    - So even if a user chooses "test123" or "mypassword" as their password, the salting mechanism makes the password secure, because it adds a random string before the password, like `!#%&(@$^*)135792`, which results in `!#%&(@$^*)135792test123` or `!#%&(@$^*)135792mypassword`, so that the final (salted) password is very hard to crack
+    - But if you choose a password on a popular website, how do you know that they use password salting behind the scenes?
+    - Almost all of them do, but just to be careful, it helps to have a strong password
+    - I actually created a separate repository called "pwgen" which contains a script that generates a strong, random password
+    - When I apply for jobs a company often asks me to create a new account and supply a username and a password
+    - I recently created the pwgen.py script to generate strong, random passwords just for this reason
+    - I have to be careful that I don't lose the password... I have many ways of saving the password
+    - I think we are about ready to wrap things up for the MD5 and SHA-256 projects
+    - One last thing
+    - I said that the MD5 and SHA-256 algorithms can be used to enhance password security
+    - There is another popular use case for these algorithms
+    - They can also produce a checksum for a file, so that you are able to verify that the file you downloaded is equivalent to the file that is stored on the server
+    - In other words, the source of the download (a server or something like that) provides a checksum, so that you can calculate the checksum for the downloaded file, and make sure it matches the checksum of the source
+    - If the checksums match, then the downloaded file is (theoretically) exactly the same as the source's file
+    - In other words, if the checksums match, then the downloaded file on your computer is exactly the same as the file on the server, at least, in theory
+    - This helps you ensure that the file you download is exactly what it is meant to be... and that the data was not altered in transmission
+    - When you download a file, it's actually the payload of a TCP packet
+    - The TCP packet is actually the payload of an IP packet
+    - All things start out as an IP packet... a TCP packet is contained within the payload of an IP packet
+    - A downloaded file might be divided across several TCP packets
+    - You can see that it actually takes some work to download a file... the file is transmitted in chunks and then the chunks are pieced together to create a unified file
+    - The file is eventually stored on the hard drive under a unique path
+    - To make sure that everything goes right, you can calculate the checksum for the downloaded file, and compare it with the server's checksum, to make sure that the two checksums match
+    - I think this concludes our discussion of the MD5 and SHA-256 algorithms
+    - The MD5 and SHA-256 algorithms can be used to enhance password security, and they can also be used to calculate checksums
+    - In my chat repository, you can see that I salt a password and hash it using the SHA-256 algorithm, and then store it in a file database, so that way, if anyone has access to the file database, it is very hard for them to crack the password hash and figure out the password
+    - I think that this is a common practice... many websites receive a password in plaintext, over an encrypted connection like https, and then salt the password, and hash it, and store the resulting password hash in a database
+    - This is a good stopping point
+    - So far I have included ten items in my portfolio, and the tenth item consists of two related projects
+    - Will I add more to my portfolio? I don't know
+    - Perhaps I will, but it is also the case that ten is a nice number
+    - At the present moment, the portfolio contains a lot of work
+    - It demonstrates how we can use Swing to write GUIs in Java
+    - It demonstrates how we can use tkinter to write GUIs in Python
+    - Swing is included in the Java standard (built-in) library
+    - tkinter is included in the Python standard (built-in) library
+    - A standard library is just a built-in library
+    - I have used gtkmm to write GUIs in C++ on MacOS in the past
+    - I have used gtk to write GUIs in C on MacOS in the past
+    - C doesn't really have a built-in library for writing GUIs... and neither does C++
+    - But Java and Python have built-in libraries for writing GUIs (Swing and tkinter, respectively)
+    - The portfolio also shows how we can use the Flask web framework to write a web application in Python
+    - Furthermore, it shows how we can use built-in socket libraries to write a chat server and a chat client in Python
+    - The chat project is a tutorial on socket programming
+    - The portfolio also provides a tutorial on encryption and password hashing
+    - The rsa, xor, rot13, and rot88 projects are a tutorial on encryption
+    - The md5 and sha256 projects are a tutorial on password hashing
+    - The chat application gives a use case and an example of password salting (along with password hashing)
+    - So I think that this portfolio covers many topics in computer science
+    - The signal project shows how we can use C and assembly in combination to accomplish low-level tasks
+    - I didn't want to forget the signal project... I wanted to include it
+    - So as I said, the portfolio covers many topics in computer science, from GUIs, to web applications, to socket programming, to cryptography, to password hashing and password salting, to low-level programming in C and assembly
+    - It also covers the two important topics of algorithms and data structures, which I explore more in other repositories
+    - Now, I think we have reached a good stopping point
+    - Sometimes I say that, and then I change my mind
+    - But this time, I will really bring this series of notes to a conclusion
+    - Today is Tuesday, November 25, 2025
+    - Thanksgiving is just two days away
+    - I spend Thanksgiving alone, and I also spend it eating vegan food
+    - I eat vegan food every day
+    - I am a vegan, an animal rights activist, and a plant rights activist
+    - Animal rights are as important as civil rights
+    - Hillary Clinton said "women's rights are human rights"
+    - I say, "animal rights are human rights"
+    - I also say, "animal rights are as important as civil rights"
+    - I also say, "animal rights are women's rights"
+    - I have many ways of saying it
+    - Jesus said that many people are the salt of the Earth
+    - Every animal is the salt of the Earth
+    - And with that I wish you a happy holiday season
