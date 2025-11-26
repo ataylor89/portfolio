@@ -271,28 +271,28 @@ You can find the list of projects below
     - If you store a password hash on a server, in a file or in a database, then anyone who can read your password hash and copy it down is still ignorant of the password, because they have to crack the password hash before they discover the password
     - Is it easy to crack a password hash?
     - If you have a common password like "test" or "password" or "password123", then a hacker can lookup your password hash in a rainbow table and discover the password that corresponds to the password hash
-    - But if you have a strong, random password, like `)*FDDFKJSDF^$*(\#%$UT&$($()\#\#)111!!!`, then it is very difficult for a hacker to find your password in a rainbow table, because they are very few rainbow tables that contain a password as strong as that one
+    - But if you have a strong, random password, like `)*FDDFKJSDF^$*(#%$UT&$($()\#\#)111!!!`, then it is very difficult for a hacker to find your password in a rainbow table, because they are very few rainbow tables that contain a password as strong as that one
     - A common practice is to salt a password before hashing it, to ensure that it is not a common password
     - When you salt a password, you turn a common password into an uncommon password, if the password is a common password
     - Salting a password means adding a random string before the start of the password
     - So if your password is "test123", then salting the password means adding a string before "test123"
     - You can assign a salt value to every user
-    - If user "andrew" has a password of "test123", you can assign a salt value of "!\#%&(@$^*)135792" to the user "andrew"
-    - Then, the password becomes "!\#%&(@$^*)135792test123"
+    - If user "andrew" has a password of "test123", you can assign a salt value of `!#%&(@$^*)135792` to the user "andrew"
+    - Then, the password becomes `!#%&(@$^*)135792test123`
     - The password has a random factor to it, and it is not a common password (whereas the original password test123 is very common)
-    - So the salted password is "!\#%&(@$^*)135792test123", whereas the original password is "test123"
+    - So the salted password is `!#%&(@$^*)135792test123`, whereas the original password is "test123"
     - When you hash the salted password, using the SHA-256 algorithm, it produces a password hash that is very difficult to crack, because it is such a random and uncommon password that is hard to find a rainbow table that contains its password hash
     - In other words, salting a password makes the resulting password hash less vulnerable to rainbow table attacks
     - That is why we salt a password before hashing it... to make it more resistant to rainbow table attacks
     - Let's give an example
     - If I run the command `sha256 'test123'` using my Python script, I get a password hash of `ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae`
-    - If I run the command `sha256 '!\#%&(@$^*)135792test123'`, which uses the salted password, I get a password hash of `caffcbc8f6d577fc55534a9a38277c0da9a482267ee8c5c3eea701ec64aa9881`
+    - If I run the command `sha256 '!#%&(@$^*)135792test123'`, which uses the salted password, I get a password hash of `caffcbc8f6d577fc55534a9a38277c0da9a482267ee8c5c3eea701ec64aa9881`
     - The second password hash, which was generated from the salted password, is a lot less common, and it is a lot harder to crack
     - To make things crystal clear, I'll just say...
     - You can use the sha256 script I provided (or perhaps the /sbin/sha256 program if you have it) to generate a rainbow table of your own making... it can have two columns, password and password hash, and you can use it to crack a common a password hash
     - That really shows you how important it is to have a strong password
     - To make up for the fact that many people don't have a strong password, a secure web application uses password salting and password hashing to make a user's password secure
-    - So even if a user chooses "test123" or "mypassword" as their password, the salting mechanism makes the password secure, because it adds a random string before the password, like `!\#%&(@$^*)135792`, which results in `!\#%&(@$^*)135792test123` or `!\#%&(@$^*)135792mypassword`, so that the final (salted) password is very hard to crack
+    - So even if a user chooses "test123" or "mypassword" as their password, the salting mechanism makes the password secure, because it adds a random string before the password, like `!#%&(@$^*)135792`, which results in `!#%&(@$^*)135792test123` or `!#%&(@$^*)135792mypassword`, so that the final (salted) password is very hard to crack
     - But if you choose a password on a popular website, how do you know that they use password salting behind the scenes?
     - Almost all of them do, but just to be careful, it helps to have a strong password
     - I actually created a separate repository called "pwgen" which contains a script that generates a strong, random password
