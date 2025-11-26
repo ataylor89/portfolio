@@ -255,7 +255,7 @@ You can find the list of projects below
     - In the context of the Apple M1 processor (which my computer runs on) a word is four bytes of data
     - So you can see that the word size depends on the context
     - The variables A, B, C, and D are words with a word size of four bytes, in the context of the MD5 algorithm
-    - The variables H1 through H8 are words with a word size of eight bytes, in the context of the SHA-256 algorithm
+    - The variables H1 through H8 are words with a word size of four bytes, in the context of the SHA-256 algorithm
     - I don't want to spend too much time laboring this point, but...
     - The MD5 algorithm really hinges on the output variables A, B, C, and D, which get modified with each iteration of processing, where a 64-byte block is processed, and the password hash that gets generated is the concentation of A, B, C, and D
     - The SHA-256 algorithm really hinges on the output variables H1 through H8, which get modified with each iteration of processing, where a 64-byte block of the padded message is processed, and the password hash that gets generated is the concentation of H1 through H8
