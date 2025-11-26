@@ -271,7 +271,7 @@ You can find the list of projects below
     - If you store a password hash on a server, in a file or in a database, then anyone who can read your password hash and copy it down is still ignorant of the password, because they have to crack the password hash before they discover the password
     - Is it easy to crack a password hash?
     - If you have a common password like "test" or "password" or "password123", then a hacker can lookup your password hash in a rainbow table and discover the password that corresponds to the password hash
-    - But if you have a strong, random password, like )*FDDFKJSDF^$*(#%$UT&$($()##)111!!!, then it is very difficult for a hacker to find your password in a rainbow table, because they are very few rainbow tables that contain a password as strong as that one
+    - But if you have a strong, random password, like `)*FDDFKJSDF^$*(\#%$UT&$($()\#\#)111!!!`, then it is very difficult for a hacker to find your password in a rainbow table, because they are very few rainbow tables that contain a password as strong as that one
     - A common practice is to salt a password before hashing it, to ensure that it is not a common password
     - When you salt a password, you turn a common password into an uncommon password, if the password is a common password
     - Salting a password means adding a random string before the start of the password
