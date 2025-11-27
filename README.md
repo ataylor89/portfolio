@@ -359,6 +359,21 @@ You can find the list of projects below
     - I also say, "animal rights are as important as civil rights"
     - I also say, "animal rights are women's rights"
     - I have many ways of saying it
-    - Jesus made a reference to the salt of the Earth
-    - Every animal is the salt of the Earth
-    - And with that I wish you a happy holiday season
+    - I grew up with dogs (a Maltese and an Old English Sheepdog) and cockatiels (a pied cockatiel and a cinammon pearl)
+    - They are my best friends and guardian angels
+    - They are with me every step of the way
+    - I thank my mom every day for letting me grow up with two dogs and two cockatiels
+    - I know that they are a part of me, and I know that I am a part of them
+    - So what am I thankful for, this Thanksgiving?
+    - I am thankful for my family (which includes a Maltese named Daisy, an Old English Sheepdog named Molly, a pied cockatiel named Sparky, a cinnamon pearl cockatiel named Marshmellow, my mom, Kayla, my dad, Owen, and every person in my family)
+    - I am thankful for my friends (honestly, I am friends with everyone, and I am so mathematical about everything that I really try to make correct decisions in every part of my life... but I am also human and I err... so it's a balance of reason and humility)
+    - I am thankful for my profession and hobbies (software engineering, computer science, mathematics, chess, reading, writing, listening to music, watching TV, and appreciating art)
+    - I am thankful for the causes that I care about... the causes I am most passionate about... which include veganism, animal rights, plant rights, mental health, and giving every person (human, animal, plant, and living creature) best medical care
+    - I am thankful for my religion, Christianity
+    - I am thankful for my favorite book, The Holy Bible
+    - I am thankful for my personal library (which includes The Holy Bible, the Art of Problem Solving math books, The Art and Craft of Problem Solving by Paul Zeitz, Analysis I by Terence Tao, Yasser Seirawan's chess books, Bruce Pandolfini's Endgame Worskhop, and more)
+    - I am thankful for every sunrise and every sunset
+    - I wish everyone a happy thanksgiving
+    - Today is Thursday, November 27, 2025, the day of Thanksgiving
+    - I'm going to catch up on my TV shows and relax
+    - Happy holidays
