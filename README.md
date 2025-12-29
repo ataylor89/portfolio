@@ -43,7 +43,7 @@ The topics covered by the projects in this portfolio include:
 19. Desktop software (e.g. the chat, Paint, and wordprocessor projects)
 20. Boolean logic, byte arithmetic, bit arithmetic
 21. Variables
-22. Loops (iteration)
+22. Loops, branching, control flow
 23. Recursion
 24. Functions
 25. Objects
