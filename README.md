@@ -68,6 +68,7 @@ Here is my software portfolio, organized as a list of projects.
 3. [chat](https://github.com/ataylor89/chat)
     - A chat client and chat server
     - Encrypts messages using the RSA algorithm, and hashes passwords using the SHA256 algorithm
+    - Uses a custom protocol (built on top of TCP) as well as custom packets
 4. [Paint](https://github.com/ataylor89/Paint)
     - A drawing and painting application written in Java using the Swing framework
 5. [WordProcessor](https://github.com/ataylor89/WordProcessor)
