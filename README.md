@@ -66,7 +66,8 @@ Here is my software portfolio, organized as a list of projects.
 2. [jhomepage](https://github.com/ataylor89/jhomepage)
     - A web application written in Java using the Spring Boot framework
 3. [chat](https://github.com/ataylor89/chat)
-    - A chat client and chat server, that encrypts messages using the RSA algorithm, and hashes passwords using the SHA256 algorithm
+    - A chat client and chat server
+    - Encrypts messages using the RSA algorithm, and hashes passwords using the SHA256 algorithm
 4. [Paint](https://github.com/ataylor89/Paint)
     - A drawing and painting application written in Java using the Swing framework
 5. [WordProcessor](https://github.com/ataylor89/WordProcessor)
