@@ -89,5 +89,5 @@ Here is my software portfolio, organized as a list of projects.
     - An implementation of the SHA256 hashing algorithm
 13. [calculator](https://github.com/ataylor89/calculator)
     - A calculator, written in Python, that evaluates arithmetic expressions (like "1 + 2 * 3")
-    - It's hard to find a good use case for stacks... strategy2.py and strategy3.py give us a use case for stacks
-    - The first strategy uses recursion; the second and third strategies use stacks and iteration
+    - It's hard to find a good use case for stacks... strategy1.py and strategy2.py give us a use case for stacks
+    - The first two strategies use stacks and iteration; the third strategy uses recursion
