@@ -91,3 +91,7 @@ Here is my software portfolio, organized as a list of projects.
     - A calculator, written in Python, that evaluates arithmetic expressions (like "1 + 2 * 3")
     - It's hard to find a good use case for stacks... strategy1.py and strategy2.py give us a use case for stacks
     - The first two strategies use stacks and iteration; the third strategy uses recursion
+14. [jcalculator](https://github.com/ataylor89/jcalculator)
+    - A calculator, written in Java, a lot like the Python version above
+    - I wanted to show how to do unit testing and command-line argument parsing in Java
+    - This project uses the JUnit framework for unit testing and the Apache Commons CLI library for command-line argument parsing
